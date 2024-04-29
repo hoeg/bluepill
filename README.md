@@ -2,7 +2,7 @@
 
 Mutating admission controller for kubernetes that ensures restricted ingress.
 
-![alt text](https://github.com/hoeg/bluepill/blob/main/pills.png?raw=true)
+![alt text](https://github.com/hoeg/bluepill/blob/main/media/pills.png?raw=true)
 
 ## Configuration
 
