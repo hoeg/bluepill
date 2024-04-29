@@ -23,7 +23,7 @@ jobs:
       env: 
         OWNER: ${{ github.repository_owner }}
       run: |
-        echo "DOCKER_IMAGE=ghcr.io/$OWNER/kandji-prometheus-exporter" >> $GITHUB_ENV
+        echo "DOCKER_IMAGE=ghcr.io/$OWNER/bluepill" >> $GITHUB_ENV
 
     - name: Build Docker image
       env:   
