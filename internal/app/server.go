@@ -8,13 +8,13 @@ import (
 )
 
 func Start() {
-	conf, err := LoadHTTPConfig()
+	conf, err := LoadConfig()
 	if err != nil {
 		log.Fatalf("failed to load config: %v", err)
 		return
 	}
-	api := morpheus.NewAPI()
-	svc := NewHTTPService(api, conf)
+	api := morpheus.NewAPI(conf.enforcementConfig)
+	svc := NewHTTPService(api, conf.HTTPConfig)
 
 	lf := lifecycle.New(lifecycle.DefaultConfig)
 	svc.RegisterLifecycle("web", lf)

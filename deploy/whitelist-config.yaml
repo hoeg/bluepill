@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bluepill-whitelist
+data: 
+  whitelist.txt: |
+    home=127.0.0.1
+    away=123.123.123.123
+    somewhere_else=1.2.3.4

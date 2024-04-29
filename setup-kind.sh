@@ -16,6 +16,7 @@ kind load docker-image docker.io/hoeg/bluepill:latest --name bluepill
 
 # apply all the resources in this folder except test-deployment.yaml
 kubectl apply -f secret.yaml
+kubectl apply -f deploy/whitelist-config.yaml
 kubectl apply -f deploy/configuration.yaml
 kubectl apply -f deploy/deployment.yaml
 kubectl apply -f deploy/service.yaml

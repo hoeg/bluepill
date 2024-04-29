@@ -31,6 +31,9 @@ spec:
           volumeMounts:
             - name: tls-volume
               mountPath: /secrets
+            - name: whitelist-volume
+              mountPath: /config/whitelist.txt
+              subPath: whitelist.txt
           envFrom:
             - configMapRef:
                 name: bluepill
@@ -47,3 +50,6 @@ spec:
         - name: tls-volume
           secret:
             secretName: bluepill-tls
+        - name: whitelist-volume
+          configMap:
+            name: bluepill-whitelist
