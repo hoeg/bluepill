@@ -19,3 +19,7 @@
 
 # Go workspace file
 go.work
+
+secret.yaml
+testdata/cert.pem
+testdata/key.pem

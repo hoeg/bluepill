@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: Bluepill API
+  version: 1.0.0
+paths:
+  /pill:
+    post:
+      summary: Add ingress annotation if the ingress has not opted out
+      consumes:
+        - application/json
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request

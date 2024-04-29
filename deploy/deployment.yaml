@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bluepill
+  labels:
+    app: bluepill
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bluepill
+  template:
+    metadata:
+      name: bluepill
+      labels:
+        app: bluepill
+    spec:
+      containers:
+        - name: bluepill
+          image: docker.io/hoeg/bluepill:latest
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 500m
+              memory: 128Mi
+            requests:
+              cpu: 250m
+              memory: 64Mi
+          ports:
+            - containerPort: 8443
+          volumeMounts:
+            - name: tls-volume
+              mountPath: /secrets
+          envFrom:
+            - configMapRef:
+                name: bluepill
+          securityContext:
+            privileged: false
+            runAsUser: 10001
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - all
+            readOnlyRootFilesystem: true
+      volumes:
+        - name: tls-volume
+          secret:
+            secretName: bluepill-tls

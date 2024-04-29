@@ -1,0 +1,19 @@
+services:
+  server:
+    build:
+      context: .
+      target: final
+    ports:
+      - 8443:8443
+    secrets:
+      - tls-cert
+      - tls-key
+    environment:
+      - BLUEPILL_HTTP_PORT=8443
+      - BLUEPILL_HTTP_CERTIFICATE_FILE=/run/secrets/tls-cert
+      - BLUEPILL_HTTP_KEY_FILE=/run/secrets/tls-key
+secrets:
+  tls-cert:
+    file: testdata/cert.pem
+  tls-key:
+    file: testdata/key.pem
