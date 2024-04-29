@@ -1,12 +1,12 @@
 # bluepill
+
 Mutating admission controller for kubernetes that ensures restricted ingress.
 
-![alt text](https://github.com/hoeg/bluepill/blob/main/pill.jpg?raw=true)
+![alt text](https://github.com/hoeg/bluepill/blob/main/media/pills.png?raw=true)
 
 ## Configuration
 
 The hook services utilizes a mix of environment variables and files for configuration.
-
 
 ### BLUEPILL_HTTP_PORT
 
@@ -43,3 +43,15 @@ nameN=ipN
 ### BLUEPILL_ENFORCEMENT_ENFORCE
 
 Indicates if the we should mutate or just log.
+
+## Deployment
+
+The `deploy/` folder contains all resources to get up and running except the secret containing the self signed certificate.
+
+`./setup-kind` prepares a cluster where the functionality can be tested by running:
+
+```
+kubectl apply -f deploy/admission-webhook.yaml && kubectl apply -f deploy/test/ingress-blue.yaml
+```
+
+and then inspecting the ingress resource afterwards.
