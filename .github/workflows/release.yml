@@ -22,8 +22,9 @@ jobs:
     - name: Prepare Image name
       env: 
         OWNER: ${{ github.repository_owner }}
+        REPO: ${{ github.event.repository.name }}
       run: |
-        echo "DOCKER_IMAGE=ghcr.io/$OWNER/bluepill" >> $GITHUB_ENV
+        echo "DOCKER_IMAGE=ghcr.io/$OWNER/$REPO" >> $GITHUB_ENV
 
     - name: Build Docker image
       env:   
