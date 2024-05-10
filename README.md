@@ -33,7 +33,7 @@ Points to the mounted whitelist file.
 
 ### Whitelist format
 
-```
+```txt
 name1=ip1
 name2=ip2
 ...
@@ -50,7 +50,7 @@ The `deploy/` folder contains all resources to get up and running except the sec
 
 `./setup-kind` prepares a cluster where the functionality can be tested by running:
 
-```
+```bash
 kubectl apply -f deploy/admission-webhook.yaml && kubectl apply -f deploy/test/ingress-blue.yaml
 ```
 
