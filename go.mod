@@ -6,7 +6,7 @@ toolchain go1.22.2
 
 require (
 	github.com/g4s8/go-lifecycle v0.0.2
-	github.com/getkin/kin-openapi v0.124.0
+	github.com/getkin/kin-openapi v0.125.0
 	github.com/gin-contrib/cors v1.7.2
 	github.com/gin-gonic/gin v1.9.1
 	k8s.io/api v0.30.0
