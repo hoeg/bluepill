@@ -8,7 +8,7 @@ require (
 	github.com/getkin/kin-openapi v0.124.0
 	github.com/gin-contrib/cors v1.7.2
 	github.com/gin-gonic/gin v1.10.0
-	k8s.io/api v0.31.3
+	k8s.io/api v0.32.0
 	k8s.io/apimachinery v0.32.0
 )
 
