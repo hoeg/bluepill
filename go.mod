@@ -1,7 +1,7 @@
 module github.com/hoeg/bluepill
 
 go 1.22.0
-toolchain go1.23.4
+toolchain go1.24.1
 
 require (
 	github.com/g4s8/go-lifecycle v0.0.2
@@ -9,7 +9,7 @@ require (
 	github.com/gin-contrib/cors v1.7.3
 	github.com/gin-gonic/gin v1.10.0
 	k8s.io/api v0.32.2
-	k8s.io/apimachinery v0.32.2
+	k8s.io/apimachinery v0.32.3
 )
 
 require (
