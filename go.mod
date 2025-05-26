@@ -8,7 +8,7 @@ require (
 	github.com/g4s8/go-lifecycle v0.0.2
 	github.com/getkin/kin-openapi v0.131.0
 	github.com/gin-contrib/cors v1.7.5
-	github.com/gin-gonic/gin v1.10.0
+	github.com/gin-gonic/gin v1.10.1
 	k8s.io/api v0.33.1
 	k8s.io/apimachinery v0.33.1
 )
