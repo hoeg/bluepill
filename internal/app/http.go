@@ -39,7 +39,8 @@ func NewHTTPService(bluepill api.ServerInterface, conf *HTTPConfig) *adaptors.HT
 	log.Println("Server started on port", conf.Port)
 
 	return adaptors.NewHTTPSService(&http.Server{
-		Addr:    fmt.Sprintf(":%s", conf.Port),
-		Handler: r,
+		Addr:        fmt.Sprintf(":%s", conf.Port),
+		Handler:     r,
+		ReadTimeout: 5 * time.Second,
 	}, conf.CertFile, conf.KeyFile)
 }
