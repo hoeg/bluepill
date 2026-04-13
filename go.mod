@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/g4s8/go-lifecycle v0.0.2
-	github.com/getkin/kin-openapi v0.134.0
+	github.com/getkin/kin-openapi v0.135.0
 	github.com/gin-contrib/cors v1.7.7
 	github.com/gin-gonic/gin v1.12.0
 	k8s.io/api v0.35.3
@@ -19,8 +19,8 @@ require (
 	github.com/fxamacker/cbor/v2 v2.9.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/goccy/go-yaml v1.19.2 // indirect
-	github.com/oasdiff/yaml v0.0.0-20260313112342-a3ea61cb4d4c // indirect
-	github.com/oasdiff/yaml3 v0.0.0-20260224194419-61cd415a242b // indirect
+	github.com/oasdiff/yaml v0.0.9 // indirect
+	github.com/oasdiff/yaml3 v0.0.9 // indirect
 	github.com/quic-go/qpack v0.6.0 // indirect
 	github.com/quic-go/quic-go v0.59.0 // indirect
 	github.com/woodsbury/decimal128 v1.3.0 // indirect
