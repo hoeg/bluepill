@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/g4s8/go-lifecycle v0.0.2
-	github.com/getkin/kin-openapi v0.136.0
+	github.com/getkin/kin-openapi v0.137.0
 	github.com/gin-contrib/cors v1.7.7
 	github.com/gin-gonic/gin v1.12.0
 	k8s.io/api v0.36.0
